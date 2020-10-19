@@ -5,15 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title> Mixology at home 🍸🏡 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title> Mixology at home with Chuck Norris 🍸🏡 </title>
 </head>
 
 <body>
-    <button class="cocktail">test cocktail</button>
-    <button class="chuck">test chuck </button>
+    <header>
+        <h1>
+            Welcome to Mixology at Home with Chuck Norris!
+        </h1>
+        <section class="options">
+            <h3>
+                What spirit are we using for your cocktail?
+            </h3>
+        </section>
+        <section class="wrapperSpirits">
+            <div class="spirit" id="whiskey">Whiskey</div>
+            <div class="spirit" id="rum">Rum</div>
+            <div class="spirit" id="gin">Gin</div>
+            <div class="spirit" id="tequila">Tequila</div>
+            <div class="spirit" id="vodka">Vodka</div>
+            <div class="spirit" id="brandy">Brandy</div>
+        </section>
+        <section id="ingredientAndRandom">
+            <div>
+                Or do you prefer a drink by a certain ingredient?
+                <form>
+                    <input type="text" id="searchIngredient" placeholder="enter ingredient" />
+                    <button id="ingredientBtn">search ingredient</button>
+                </form>
+                <div>
+                    Don't know what to drink? Let Chuck Norris give you a suggestion!
+                    <button id="randomDrinkBtn"> Chuck tell me what to drink!</button>
+                </div>
+        <p class="chuckQuote">
+            Had a rough day? Let Chuck Norris help you with a pun!
+            <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
+        </p>
+        </section>
+        
+        <button class="cocktail">test cocktail</button>
+        <button class="chuck">test chuck </button>
 
+    </header>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>.
     <script src="./java.js"></script>
+    <footer>
+        Main menu
+    </footer>
 </body>
 
 </html>

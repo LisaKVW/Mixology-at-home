@@ -1,0 +1,24 @@
+body{
+    height: 100vw;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.wrapperSpirits{
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: fit-content;
+    margin: auto;
+    grid-gap:15px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid red;
+}
+
+.spirit{
+    margin: 20px;
+    border: 2px solid green;
+    padding: 30px
+}

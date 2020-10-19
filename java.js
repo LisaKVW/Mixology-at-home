@@ -35,6 +35,14 @@ const getCocktail = async () => {
 }
 console.log(getCocktail)
 
+const handleSpirirtClick = (event) => {
+    const clickedSpirirt = event.target
+
+}
+
+//eventListener for Spirit blocks
+document.querySelectorAll('.spirit').forEach(spirit => spirit.addEventListener('click', handleSpirirtClick))
+
 //API cocktail
 document.querySelector(".cocktail").addEventListener("click", getCocktail);
 
