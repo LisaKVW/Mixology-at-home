@@ -14,7 +14,10 @@ const getQuote = async () => {
     console.log("first")
     try {
         const response = await axios.get(API_URL_CHUCK)
-        console.log(response)
+        console.log(response.data.value)
+        let showQuote = response.data.value
+        let quoteElement = document.querySelector("#showQuote")
+        quoteElement.innerHTML = showQuote
     } catch (error) {
         console.log(error)
     }
@@ -23,18 +26,29 @@ console.log(getQuote)
 
 
 
-//check API cocktails
-const getCocktail = async () => {
+//get and save cocktail from input in form - then go to showSearchCocktail
+const getCocktail = (event) => {
+    event.preventDefault();
+    let inputSearch = document.querySelector("#searchCocktail").value;
+    console.log(inputSearch)
+    showSearchCocktail(inputSearch);
+}
+
+//show ingredient/cocktail via the input and button cocktailBtn
+const showSearchCocktail = async (inputSearch) => {
     console.log("first")
     try {
-        const response = await axios.get(API_URL)
-        console.log(response)
+        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php?s=${inputSearch}`)
+        console.log(response.data.drinks[0])
     } catch (error) {
         console.log(error)
     }
 }
-console.log(getCocktail)
+console.log(showSearchCocktail)
+// do an if statement - that if there is somthing behind the ingredient/recipe show if null its false and skip
 
+
+//6 spitit buttons
 const handleSpirirtClick = (event) => {
     const clickedSpirirt = event.target
 
@@ -44,8 +58,8 @@ const handleSpirirtClick = (event) => {
 document.querySelectorAll('.spirit').forEach(spirit => spirit.addEventListener('click', handleSpirirtClick))
 
 //API cocktail
-document.querySelector(".cocktail").addEventListener("click", getCocktail);
+document.querySelector("#cocktailBtn").addEventListener("click", getCocktail);
 
 //API Chuck
-document.querySelector(".chuck").addEventListener("click", getQuote)
+document.querySelector("#chuckQuoteBtn").addEventListener("click", getQuote)
 
