@@ -1,4 +1,3 @@
-console.log("connect check")
 //API info cocktails
 const API_KEY = "1"
 //const drink = drink // this will be used in form, for user to enter a drink search, currently defaul is at margarita
@@ -8,6 +7,7 @@ const API_URL = `https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php
 //API chuck will give random quotes - it will be something like response.data.categories.value
 const API_URL_CHUCK = "https://api.chucknorris.io/jokes/random"
 
+let spiritBox = ["", "", "", "", "", ""]
 
 //API check Chuck Norris - GOOD
 const getQuote = async () => {
@@ -118,35 +118,45 @@ const showSearchCocktail = async (inputSearch) => {
         <span id="ingredient11">${drink.strIngredient11} , </span>`
     }
     showRecipe.innerHTML += `<h3> Instructions </h3>
-    <p id="instructions"> ${instructions} in a ${glass}</p>
+    <p id="instructions"> ${instructions}. Serve in a ${glass}</p>
     <p> Don't forget to taste your drink first before serving! </p>`
 
   } catch (error) {
     console.log(error)
   }
 }
-console.log(showSearchCocktail)
+
 // do an if statement - that if there is somthing behind the ingredient/recipe show if null its false and skip
 //to show result of cocktail recipe: showRecipe.textContent = response.data.drinks[0.strMeasure1]
 
-//6 spitit buttons
-const handleSpirirtClick = async (event) => {
-  console.log("first")
+// spitit buttons - for all 6 spirits 
+const handleSpiritClick = async (event) => {
+  //console.log("first")
   try {
-    const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php?s=whiskey`)
-    let drink = response.data.drinks[0]
-    console.log(drink)
-  const clickedSpirirt = event.target
-  clickedSpirirt.innerHTML = ""
-
- } catch (error) {
-  console.log(error)
+    let spirit = event.target.id
+    //spirit is the id  - the HTML element (id) is now triggered via event.target 
+    //So we wrapped our handleSpiritClick inside an anomenous function, this so we can give it an paremeter of event, and the event os needed to grab the id
+    console.log("event", event)
+    console.log("target", event.target)
+    console.log("id", event.target.id)
+    console.log(spirit)
+    //get value of div
+    const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${spirit}`) //template literal ${spirit}
+    console.log(response)
+    // let drink = [[response.data.drinks[0].strDrink], [response.data.drinks[1].strDrink], [response.data.drinks[2].strDrink], [response.data.drinks[3].strDrink], [response.data.drinks[4].strDrink], [response.data.drinks[5].strDrink], [response.data.drinks[6].strDrink], [response.data.drinks[7].strDrink], [response.data.drinks[8].strDrink], [response.data.drinks[9].strDrink], [response.data.drinks[0].strDrink]]
+    // let vodkaDrink = document.querySelector("#vodka") //interpolate with backtick?
+    // vodkaDrink.innerHTML = drink
+  } catch (error) {
+    console.log(error)
+  }
 }
-}
 
+//eventListener for Spirit all 6
+document.querySelectorAll('.spirit').forEach(spirit => spirit.addEventListener('click', function (event) {
+  handleSpiritClick(event)
+}))
+//we added an anonemous function and gave it a paramener, in this case parameterus event. We can now grab the 'event' in handleSpiritClick function, this because we gave it an parameter
 
-//eventListener for Spirit blocks
-document.querySelectorAll('.spirit').forEach(spirit => spirit.addEventListener('click', handleSpirirtClick))
 
 //API cocktail
 document.querySelector("#cocktailBtn").addEventListener("click", getCocktail);
