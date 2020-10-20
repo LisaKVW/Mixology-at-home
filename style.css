@@ -7,20 +7,20 @@ body{
 
 .wrapperSpirits{
     display: grid;
-    grid-template-columns: 1fr 1fr;;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     max-width: fit-content;
-    margin: auto;
+    margin: 0px;
     grid-gap:15px;
-    justify-content: center;
+    justify-content:;
     align-items: center;
     border: 3px solid red;
+    padding: -10px;
 }
 
 .spirit{
-    margin: 20px;
+    margin: 5px;
     border: 2px solid green;
-    padding: 30px
+    padding: 15px
 }
 
 #cocktailAndRandom{

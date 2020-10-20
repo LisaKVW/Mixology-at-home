@@ -136,16 +136,15 @@ const handleSpiritClick = async (event) => {
     let spirit = event.target.id
     //spirit is the id  - the HTML element (id) is now triggered via event.target 
     //So we wrapped our handleSpiritClick inside an anomenous function, this so we can give it an paremeter of event, and the event os needed to grab the id
-    console.log("event", event)
-    console.log("target", event.target)
-    console.log("id", event.target.id)
-    console.log(spirit)
-    //get value of div
+    //console.log("event", event) this grabs the whole <div>
+    //console.log("target", event.target) //grabs the div id
+    //console.log(spirit)  get value of div - which it the id
     const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${spirit}`) //template literal ${spirit}
     console.log(response)
-    // let drink = [[response.data.drinks[0].strDrink], [response.data.drinks[1].strDrink], [response.data.drinks[2].strDrink], [response.data.drinks[3].strDrink], [response.data.drinks[4].strDrink], [response.data.drinks[5].strDrink], [response.data.drinks[6].strDrink], [response.data.drinks[7].strDrink], [response.data.drinks[8].strDrink], [response.data.drinks[9].strDrink], [response.data.drinks[0].strDrink]]
-    // let vodkaDrink = document.querySelector("#vodka") //interpolate with backtick?
-    // vodkaDrink.innerHTML = drink
+
+    let drink = response.data.drinks[0].strDrink
+    let vodkaDrink = document.querySelector("#vodka") //interpolate with backtick?
+    vodkaDrink.innerHTML = drink
   } catch (error) {
     console.log(error)
   }
