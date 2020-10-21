@@ -3,9 +3,27 @@ body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    display: block;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    background-image: url("https://cdn.vox-cdn.com/thumbor/5U9YKYmXL2_85VcSQii0WOo8BMU=/0x0:5000x3750/1320x743/filters:focal(2100x1475:2900x2275):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65947322/Main_Bar_3.0.jpg");
+    color: grey;
 }
 
 .chuckImg {
-    height: 350px;
-    width: 470px;
+    height: 320px;
+    width: 420px;
+    margin: 26px;
+}
+
+.enterSite{
+    font-size: large;
+    padding: 5px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    text-align: center;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
 }
