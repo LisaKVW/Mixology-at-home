@@ -143,6 +143,10 @@ const getRandomDrink = async () => {
   try {
     const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     console.log(response)
+    let showRandomDrink = document.querySelector("#showRandomDrink")
+    let showRandomIngMeas = document.querySelector("#showRandomIngMeas")
+    let showRandomSteps = document.querySelector("#showRandomSteps")
+
     let drink = response.data.drinks[0]
     console.log(drink)
     let selectedDrinkName = drink.strDrink;
@@ -166,11 +170,7 @@ const getRandomDrink = async () => {
       drink.strIngredient10,
       drink.strIngredient11
     ]
-    for (let i = 0; i < ingredients.length; i++) {
-      if (ingredients[i] !== null) {
-        console.log(ingredients[i])
-      }
-    }
+
     let measurement = [
       drink.strMeasure1,
       drink.strMeasure2,
@@ -184,26 +184,20 @@ const getRandomDrink = async () => {
       drink.strMeasure10,
       drink.strMeasure11
     ]
-    for (let i = 0; i < measurement.length; i++) {
-      if (measurement[i] !== null) {
-        console.log(measurement[i])
+    for (let i = 0; i < measurement.length; i++) { // created a for loop, to loop through the ingredients and measurements
+      if (measurement[i] !== null) {  // added if - so when loop hits a null result, it stops
+        let divMeasIng = document.createElement("div") // created a new div element - this so we can interpolate our looped resutls on the html
+        divMeasIng.innerHTML = `${measurement[i]} ${ingredients[i]}`
+        showRandomIngMeas.append(divMeasIng) // append our new div at 
       }
     }
-
-    let showRandomDrink = document.querySelector("#showRandomDrink")
     showRandomDrink.innerHTML =
-      `
-        <div class="showCocktail"> 
+      ` <div class="showCocktail"> 
         <h2 id="cocktailName"> ${selectedDrinkName} </h2>
-        <img src=${image} id="cocktailImage" /> </div>
+        <img src=${image} id="cocktailImage" /> </div> 
+         <h3> Ingredients </h3> `
 
-        <h3> Ingredients </h3> 
-        <div>
-        <div id="measurement">${measurement}  </div>
-        <div id="ingredient">${ingredients} , </div>
-        </div>`
-
-    showRandomDrink.innerHTML += `<h3> Instructions </h3>
+    showRandomSteps.innerHTML += `<h3> Instructions </h3>
     <p id="instructions"> ${instructions}. Serve in a ${glass}</p>
     <p> Don't forget to taste your drink first before serving! </p>`
 
