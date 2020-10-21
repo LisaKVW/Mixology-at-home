@@ -16,37 +16,36 @@
         </h1>
         <section class="options">
             <h3>
-                What spirit are we using for your cocktail?
+                Let me help you out with making a cocktail today!
             </h3>
-        </section>
-        <section class="wrapperSpirits">
-            <div class="spirit" id="whiskey">Whiskey
-            </div>
-            <div class="spirit" id="rum">Rum</div>
-            <div class="spirit" id="gin">Gin</div>
-            <div class="spirit" id="tequila">Tequila</div>
-            <div class="spirit" id="vodka">Vodka</div>
-            <div class="spirit" id="brandy">Brandy</div>
-        </section>
-        <section id="cocktailAndRandom">
-            <div>
-                Know the name of your cocktail? Enter it here to get the recipe:
-                <form>
-                    <input type="text" id="searchCocktail" placeholder="enter a cocktail name" />
-                    <button id="cocktailBtn">search cocktail</button>
-                </form>
-                <p id="showRecipe"> placeholder for recipe </p>
+            <section id="cocktailAndRandom">
                 <div>
-                    Don't know what to drink? Let Chuck Norris give you a suggestion!
-                    <button id="randomDrinkBtn"> Chuck tell me what to drink!</button>
+                    Do you know the cocktail by name? If yes great! Share it with us, and Chuck will tell you how to
+                    make it
+                    <form>
+                        <input type="text" id="searchCocktail" placeholder="enter a cocktail name" />
+                        <button id="cocktailBtn">search cocktail</button>
+                    </form>
+                    <p id="showRecipe"> placeholder for recipe </p>
+                    <!-- <div> Not sure what you want make? Give us an ingredient and Chuck will give you some ideas </div>
+                    <form>
+                        <input type="text" id="searchIngredient" placeholder="enter an ingredient" />
+                        <button id="ingredientBtn">search ingredient</button>
+                    </form>
+                    <p id="showIngredient"> placeholder for ingredient </p> -->
+
+                    <div>
+                        Don't know what to drink? Let Chuck Norris give you a suggestion!
+                        <button id="randomDrinkBtn"> Chuck tell me what to drink!</button>
+                        <div id="showRandomDrink"> Todays suggestion: </div>
+                    </div>
+                    <p class="chuckQuote">
+                        Had a rough day? Let Chuck Norris help you with a pun!
+                        <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
+                    <div id="showQuote"> Quote: </div>
+                    </p>
                 </div>
-                <p class="chuckQuote">
-                    Had a rough day? Let Chuck Norris help you with a pun!
-                    <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
-                <div id="showQuote"> Quote: </div>
-                </p>
-            </div>
-        </section>
+            </section>
     </header>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>.
     <script src="./java.js"></script>

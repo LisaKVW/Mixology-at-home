@@ -25,12 +25,19 @@ body{
 
 #cocktailAndRandom{
     display: grid;
-    grid-template-columns: 1fr 1fr;;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin:30px;
     padding: 30px; 
-
 }
+
+.resultSpiritDiv{
+    color: red;
+    display: -ms-inline-grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 #cocktailImage {
     height: 175px;
     width: 175px;
