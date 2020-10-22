@@ -185,10 +185,10 @@ const getQuote = async () => {
 console.log(getQuote)
 
 
-//API QUOTE by Chuck - GOOD
+//API for QUOTE by Chuck 
 document.querySelector("#chuckQuoteBtn").addEventListener("click", getQuote)
 
-//random drink by Chuck
+//API for random drink by Chuck
 document.querySelector("#randomDrinkBtn").addEventListener("click", getRandomDrink)
 
 //API - search by cocktail name

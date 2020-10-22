@@ -27,3 +27,15 @@ body{
     font-family: 'Raleway', sans-serif;
     position: relative;
 }
+
+button {
+    font-family: 'Raleway', sans-serif;
+    border: 2px solid 0.8px;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+button :hover{
+    cursor: pointer;
+    color:red;
+}
