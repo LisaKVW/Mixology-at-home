@@ -8,7 +8,7 @@ const API_URL_CHUCK = "https://api.chucknorris.io/jokes/random"
 
 const getCocktail = (event) => {
   event.preventDefault();
-  let inputSearch = document.querySelector("#searchCocktail").value;
+  let inputSearch = document.querySelector("#search-cocktail").value;
   showSearchCocktail(inputSearch);
 }
 
@@ -18,7 +18,7 @@ const showSearchCocktail = (inputSearch) => {
       let cocktailImg = document.querySelector(".cocktailImg")
       cocktailImg.innerHTML = ""
 
-      let cocktailNameContain = document.querySelector(".cocktailNameContain")
+      let cocktailNameContain = document.querySelector(".cocktail-name-contain")
       cocktailNameContain.innerHTML = ""
 
       let cocktailIngredMeas = document.querySelector(".cocktailIngredMeas")
@@ -85,7 +85,7 @@ const getRandomDrink = () => {
       let cocktailImg = document.querySelector(".cocktailImg")
       cocktailImg.innerHTML = ""
 
-      let cocktailNameContain = document.querySelector(".cocktailNameContain")
+      let cocktailNameContain = document.querySelector(".cocktail-name-contain")
       cocktailNameContain.innerHTML = ""
 
       let cocktailIngredMeas = document.querySelector(".cocktailIngredMeas")
@@ -155,10 +155,10 @@ const getQuote = async () => {
 }
 
 //API for QUOTE by Chuck 
-document.querySelector("#chuckQuoteBtn").addEventListener("click", getQuote)
+document.querySelector("#chuck-quote-btn").addEventListener("click", getQuote)
 
 //API for random drink by Chuck
-document.querySelector("#randomDrinkBtn").addEventListener("click", getRandomDrink)
+document.querySelector("#random-drink-btn").addEventListener("click", getRandomDrink)
 
 //API - search by cocktail name
-document.querySelector("#cocktailBtn").addEventListener("click", getCocktail);
+document.querySelector("#cocktail-btn").addEventListener("click", getCocktail);
