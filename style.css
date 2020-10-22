@@ -20,7 +20,7 @@ header {
 main {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     width: 100vmax;
     margin: 0 auto;
     background-color: blue;
@@ -37,31 +37,34 @@ main {
 #random-cocktail{
     grid-column-start: 1;
     grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2; 
-    padding:20px;
+    grid-row-start: 1;
+    grid-row-end: 1; 
 }
 
 #show-random-drink {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 3; 
+    grid-row-end: 1; 
 }
 
 #chuck-quote {
     grid-column-start: 1;
     grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;   
-    padding: 20px;
+    grid-row-start: 1;
+    grid-row-end: 1;   
+}
+
+#show-quote{
+    text-align: left;
+    padding-left: 17px;
 }
 
 section {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 3;  
+    grid-row-end: 1;  
     text-align: center;
     background-color: yellow;  
 }
@@ -86,6 +89,6 @@ button {
 }
 
 img {
-    height: 175px;
-    width:175px;
+    height: 185px;
+    width: 185px;
 }
