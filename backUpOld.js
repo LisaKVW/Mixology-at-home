@@ -340,3 +340,170 @@ const getRandomDrink = async () => {
         showRandomDrink.innerHTML += `<h3> Instructions </h3>
     <p id="instructions"> ${instructions}. Serve in a ${glass}</p>
     <p> Don't forget to taste your drink first before serving! </p>`
+
+
+
+
+    random good old load
+
+        const getRandomDrink = async () => {
+            console.log("first")
+            try {
+                const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+                console.log(response)
+                // let showRandomDrink = document.querySelector("#showRandomDrink")
+                // let showRandomSteps = document.querySelector("#showRandomSteps")
+                // let showRandomIngMeas = document.querySelector("#showRandomIngMeas")
+
+                let imageContainer = document.querySelector(".imageContainer")
+                imageContainer = ""
+                let nameContainer = document.querySelector(".nameContainer")
+                nameContainer = ""
+                let ingredientsContainer = document.querySelector(".ingredientsContainer")
+                ingredientsContainer = ""
+                let instructionsContainer = document.querySelector(".instructionsContainer")
+                instructionsContainer = ""
+
+                let drink = response.data.drinks[0]
+                console.log(drink)
+                let selectedDrinkName = drink.strDrink;
+                console.log(selectedDrinkName)
+                let glass = drink.strGlass
+                console.log(glass)
+                let image = drink.strDrinkThumb
+                console.log(image)
+                let instructions = drink.strInstructions
+                console.log(instructions)
+                let ingredients = [
+                    drink.strIngredient1,
+                    drink.strIngredient2,
+                    drink.strIngredient3,
+                    drink.strIngredient4,
+                    drink.strIngredient5,
+                    drink.strIngredient6,
+                    drink.strIngredient7,
+                    drink.strIngredient8,
+                    drink.strIngredient9,
+                    drink.strIngredient10,
+                    drink.strIngredient11
+                ]
+
+                let measurement = [
+                    drink.strMeasure1,
+                    drink.strMeasure2,
+                    drink.strMeasure3,
+                    drink.strMeasure4,
+                    drink.strMeasure5,
+                    drink.strMeasure6,
+                    drink.strMeasure7,
+                    drink.strMeasure8,
+                    drink.strMeasure9,
+                    drink.strMeasure10,
+                    drink.strMeasure11
+                ]
+                for (let i = 0; i < measurement.length; i++) { // created a for loop, to loop through the ingredients and measurements
+                    if (measurement[i] !== null && measurement[i] !== "::marker") {  // added if - so when loop hits a null result, it stops
+                        let listMeasIng = document.createElement("li") // created a new li element - this so we can interpolate our looped resutls on the html
+                        listMeasIng.innerText = `${measurement[i]} ${ingredients[i]}`
+                        showRandomIngMeas.append(listMeasIng) // append our new div at 
+                    }
+                }
+                showRandomDrink.innerText =
+                    // ` <div class="showCocktail"> 
+                    //   <h2 id="cocktailName"> ${selectedDrinkName} </h2>
+                    //   <img src=${image} id="cocktailImage" /> </div> 
+                    //    <h3> Ingredients </h3> `
+
+                    showRandomSteps.innerHTML += `<h3> Instructions </h3>
+    <p id="instructions"> ${instructions}. Serve in a ${glass}</p>
+    <p> Don't forget to taste your drink first before serving! </p>`
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+
+
+
+        BACK-UP BEN random getCocktail
+
+        const getRandomDrink = async () => {
+            console.log("first")
+            try {
+                console.log("second")
+                const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+                // let showRandomDrink = document.querySelector("#showRandomDrink")
+                // let showRandomSteps = document.querySelector("#showRandomSteps")
+                // let showRandomIngMeas = document.querySelector("#showRandomIngMeas")
+
+                let imgContainer = document.querySelector(".imgContainer")
+                imgContainer = ""
+                let nameContainer = document.querySelector(".nameContainer")
+                nameContainer = ""
+                let ingredientsContainer = document.querySelector(".ingredientsContainer")
+                ingredientsContainer = ""
+                let instructionsContainer = document.querySelector(".instructionsContainer")
+                instructionsContainer = ""
+
+                console.log("third")
+
+                let drink = response.data.drinks[0]
+                // console.log(drink)
+                let selectedDrinkName = drink.strDrink;
+                // console.log(selectedDrinkName)
+                let glass = drink.strGlass
+                // console.log(glass)
+                let image = drink.strDrinkThumb
+                // console.log(image)
+                let instructions = drink.strInstructions
+                // console.log(instructions)
+                let ingredients = [
+                    drink.strIngredient1,
+                    drink.strIngredient2,
+                    drink.strIngredient3,
+                    drink.strIngredient4,
+                    drink.strIngredient5,
+                    drink.strIngredient6,
+                    drink.strIngredient7,
+                    drink.strIngredient8,
+                    drink.strIngredient9,
+                    drink.strIngredient10,
+                    drink.strIngredient11
+                ]
+
+                let measurement = [
+                    drink.strMeasure1,
+                    drink.strMeasure2,
+                    drink.strMeasure3,
+                    drink.strMeasure4,
+                    drink.strMeasure5,
+                    drink.strMeasure6,
+                    drink.strMeasure7,
+                    drink.strMeasure8,
+                    drink.strMeasure9,
+                    drink.strMeasure10,
+                    drink.strMeasure11
+                ]
+                console.log("fourth")
+                for (let i = 0; i < ingredients.length; i++) { // created a for loop, to loop through the ingredients and measurements
+                    if (ingredients[i] !== null && ingredients[i] !== "::marker") {  // added if - so when loop hits a null result, it stops
+                        let newLi = document.createElement("li") // created a new li element - this so we can interpolate our looped resutls on the html
+                        newLi.innerText = `${measurement[i]} ${ingredients[i]}`
+                        ingredientsContainer.append(newLi) // append our new div at 
+                        console.log("fifth")
+                    }
+                }
+                nameContainer.innerText = selectedDrinkName;
+                imgContainer.innerHTML = `<img src="${image}">`
+                instructionsContainer.innerText = instructions
+                console.log("six")
+    // showRandomDrink.innerText =
+    // ` <div class="showCocktail"> 
+    //   <h2 id="cocktailName"> ${selectedDrinkName} </h2>
+    //   <img src=${image} id="cocktailImage" /> </div> 
+    //    <h3> Ingredients </h3> `
+
+    //   showRandomSteps.innerHTML += `<h3> Instructions </h3>
+    // <p id="instructions"> ${instructions}. Serve in a ${glass}</p>
+    // <p> Don't forget to taste your drink first before serving! </p>`

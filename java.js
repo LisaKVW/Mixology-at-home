@@ -53,7 +53,6 @@ const showSearchCocktail = async (inputSearch) => {
         <div class="showCocktail"> 
         <h2 id="cocktailName"> ${selectedDrinkName} </h2>
         <img src=${image} id="cocktailImage" /> </div>
-
         <h3> Ingredients </h3> 
         <span id="measurement">${drink.strMeasure1}  </span>
         <span id="ingredient">${drink.strIngredient1} , </span>`
