@@ -22,7 +22,7 @@ main {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 100vmax;
-    margin: 0;
+    margin: 0 auto;
     background-color: blue;
 }
 
@@ -32,15 +32,6 @@ main {
     grid-row-start: 1;
     grid-row-end: 1;
     padding: 20px;
-}
-
-#show-cocktail-name {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;  
-    display: grid;
-    text-align: center;
 }
 
 #random-cocktail{
@@ -54,8 +45,8 @@ main {
 #show-random-drink {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2; 
+    grid-row-start: 1;
+    grid-row-end: 3; 
 }
 
 #chuck-quote {
@@ -66,19 +57,13 @@ main {
     padding: 20px;
 }
 
-#show-quote {
+section {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 3;
+    grid-row-start: 1;
     grid-row-end: 3;  
     text-align: center;
-}
-
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
+    background-color: yellow;  
 }
 
 form{

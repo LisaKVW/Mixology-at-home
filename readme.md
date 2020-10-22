@@ -9,7 +9,7 @@ By: Lisa Venneker Wand
 
 ## Description
 Site to find cocktail recipes by name or at random selection. 
-Additional inspiration brought by Chuck Norris, avaiable via a button for his puns.
+Additional "pun button" added, this for fun pun by Chuck Norris.
 
 ## Technologies used
 ![logos](./img/logo.jpg)
