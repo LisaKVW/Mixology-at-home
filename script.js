@@ -15,19 +15,19 @@ const getCocktail = (event) => {
 const showSearchCocktail = (inputSearch) => {
   axios.get(`https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php?s=${inputSearch}`)
     .then(response => {
-      let cocktailImg = document.querySelector(".cocktailImg")
+      let cocktailImg = document.querySelector(".cocktail-img")
       cocktailImg.innerHTML = ""
 
       let cocktailNameContain = document.querySelector(".cocktail-name-contain")
       cocktailNameContain.innerHTML = ""
 
-      let cocktailIngredMeas = document.querySelector(".cocktailIngredMeas")
+      let cocktailIngredMeas = document.querySelector(".cocktail-ingred-meas")
       cocktailIngredMeas.innerHTML = ""
 
-      let cocktailSteps = document.querySelector(".cocktailSteps")
+      let cocktailSteps = document.querySelector(".cocktail-steps")
       cocktailSteps.innerHTML = ""
 
-      let cocktailGlass = document.querySelector(".cocktailGlass")
+      let cocktailGlass = document.querySelector(".cocktail-glass")
       cocktailGlass.innerHTML = ""
 
       let drink = response.data.drinks[0]
@@ -82,19 +82,19 @@ const getRandomDrink = () => {
   axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then(response => {
 
-      let cocktailImg = document.querySelector(".cocktailImg")
+      let cocktailImg = document.querySelector(".cocktail-img")
       cocktailImg.innerHTML = ""
 
       let cocktailNameContain = document.querySelector(".cocktail-name-contain")
       cocktailNameContain.innerHTML = ""
 
-      let cocktailIngredMeas = document.querySelector(".cocktailIngredMeas")
+      let cocktailIngredMeas = document.querySelector(".cocktail-ingred-meas")
       cocktailIngredMeas.innerHTML = ""
 
-      let cocktailSteps = document.querySelector(".cocktailSteps")
+      let cocktailSteps = document.querySelector(".cocktail-steps")
       cocktailSteps.innerHTML = ""
 
-      let cocktailGlass = document.querySelector(".cocktailGlass")
+      let cocktailGlass = document.querySelector(".cocktail-glass")
       cocktailGlass.innerHTML = ""
 
       let drink = response.data.drinks[0]
