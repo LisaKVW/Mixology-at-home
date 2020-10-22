@@ -19,41 +19,44 @@
         </h3>
     </header>
     <main>
-        Know the cocktail by name? If yes great! Share it with us, and Chuck will tell you how to
-        make it
-        <form>
-            <input type="text" id="searchCocktail" placeholder="  enter a cocktail name" />
-            <button id="cocktailBtn">search cocktail</button>
-        </form>
-        <section class="searchCocktailName">
+        <div id="know-cocktail">
+            Know the cocktail by name? If yes great! Share it with us, and Chuck will tell you how to make it
+            <form>
+                <input type="text" id="searchCocktail" placeholder="  enter a cocktail name" />
+                <br>
+                <button id="cocktailBtn">search cocktail</button>
+            </form>
+        </div>
+        <section id="show-cocktail-name">
             <div class="cocktailNameContain"></div>
             <div class="cocktailImg"></div>
             <div class="cocktailIngredMeas"></div>
             <div class="cocktailSteps"></div>
             <div class="cocktailGlass"></div>
             <div>
-                Don't forget to taste your drink first before serving - cheers!🍸 
+                Don't forget to taste your drink first before serving - cheers!🍸
             </div>
         </section>
 
-        <div class="searchRandom">
+        <div id="random-cocktail">
             Don't know what to drink? Let Chuck Norris give you a suggestion!
             <button id="randomDrinkBtn"> Chuck tell me what to drink!</button>
-            <section class="showRandomDrink"> Todays suggestion:
-                <div class="cocktailNameContain"></div>
-                <div class="cocktailImg"></div>
-                <div class="cocktailIngredMeas"></div>
-                <div class="cocktailSteps"></div>
-                <div class="cocktailGlass"></div>
-                <div> Don't forget to taste your drink first before serving - cheers! 🍹 </div>
-            </section>
+        </div>
+        <section id="show-random-drink"> Todays suggestion:
+            <div class="cocktailNameContain"></div>
+            <div class="cocktailImg"></div>
+            <div class="cocktailIngredMeas"></div>
+            <div class="cocktailSteps"></div>
+            <div class="cocktailGlass"></div>
+            <div> Don't forget to taste your drink first before serving - cheers! 🍹 </div>
+        </section>
 
-            <div class="chuckQuote">
-                Had a rough day? Let Chuck Norris help you with a pun!
-                <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
-            </div>
+        <div id="chuck-quote">
+            Had a rough day? Let Chuck Norris help you with a pun!
+            <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
+        </div>
+        <div id="show-quote"> Quote: </div>
     </main>
-    <div id="showQuote"> Quote: </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>.
     <script src="./script.js"></script>

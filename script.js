@@ -176,7 +176,7 @@ const getQuote = async () => {
     const response = await axios.get(API_URL_CHUCK)
     console.log(response.data.value)
     let showQuote = response.data.value
-    let quoteElement = document.querySelector("#showQuote")
+    let quoteElement = document.querySelector("#show-quote")
     quoteElement.innerHTML = showQuote
   } catch (error) {
     console.log(error)
