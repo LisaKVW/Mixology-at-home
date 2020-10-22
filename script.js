@@ -1,23 +1,20 @@
-//API info cocktails
+//API key for cocktails
 const API_KEY = "1"
-//const drink = drink // this will be used in form, for user to enter a drink search, currently defaul is at margarita
+//API to find cocktails by name
 const API_URL = `https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php?s=margarita`
 
-//API info Chuck Norris
-//API chuck will give random quotes - it will be something like response.data.categories.value
+//API URL Chuck Norris
 const API_URL_CHUCK = "https://api.chucknorris.io/jokes/random"
 
 const getCocktail = (event) => {
   event.preventDefault();
   let inputSearch = document.querySelector("#searchCocktail").value;
-  console.log(inputSearch)
   showSearchCocktail(inputSearch);
 }
 
 const showSearchCocktail = (inputSearch) => {
   axios.get(`https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php?s=${inputSearch}`)
     .then(response => {
-      console.log("second")
       let cocktailImg = document.querySelector(".cocktailImg")
       cocktailImg.innerHTML = ""
 
@@ -33,18 +30,11 @@ const showSearchCocktail = (inputSearch) => {
       let cocktailGlass = document.querySelector(".cocktailGlass")
       cocktailGlass.innerHTML = ""
 
-      console.log("third")
-
       let drink = response.data.drinks[0]
-      console.log(drink)
       let selectedDrinkName = drink.strDrink;
-      console.log(selectedDrinkName)
       let glass = drink.strGlass
-      console.log(glass)
       let image = drink.strDrinkThumb
-      console.log(image)
       let instructions = drink.strInstructions
-      console.log(instructions)
       let ingredients = [
         drink.strIngredient1,
         drink.strIngredient2,
@@ -72,22 +62,18 @@ const showSearchCocktail = (inputSearch) => {
         drink.strMeasure10,
         drink.strMeasure11
       ]
-      console.log("fourth")
-      for (let i = 0; i < ingredients.length; i++) { // created a for loop, to loop through the ingredients and measurements
-        if (ingredients[i] !== null && ingredients[i] !== "::marker") {  // added if - so when loop hits a null result, it stops
-          console.log(ingredients[i])
-          console.log(measurement[i])
+      for (let i = 0; i < ingredients.length; i++) {
+        if (ingredients[i] !== null && ingredients[i] !== "::marker") {
           let newLi = document.createElement("div")
           newLi.innerText = `${measurement[i]} ${ingredients[i]}`
-
           cocktailIngredMeas.append(newLi)
         }
       }
       cocktailNameContain.innerText = selectedDrinkName;
       cocktailImg.innerHTML = `<img src="${image}">`
       cocktailSteps.innerText = instructions
-      cocktailGlass.innerText = glass;
-      console.log("six")
+      cocktailGlass.innerText = (`Serve in a ${glass}`)
+
     })
 }
 
@@ -95,7 +81,7 @@ const showSearchCocktail = (inputSearch) => {
 const getRandomDrink = () => {
   axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then(response => {
-      console.log("second")
+
       let cocktailImg = document.querySelector(".cocktailImg")
       cocktailImg.innerHTML = ""
 
@@ -111,18 +97,11 @@ const getRandomDrink = () => {
       let cocktailGlass = document.querySelector(".cocktailGlass")
       cocktailGlass.innerHTML = ""
 
-      console.log("third")
-
       let drink = response.data.drinks[0]
-      console.log(drink)
       let selectedDrinkName = drink.strDrink;
-      console.log(selectedDrinkName)
       let glass = drink.strGlass
-      console.log(glass)
       let image = drink.strDrinkThumb
-      console.log(image)
       let instructions = drink.strInstructions
-      console.log(instructions)
       let ingredients = [
         drink.strIngredient1,
         drink.strIngredient2,
@@ -150,40 +129,30 @@ const getRandomDrink = () => {
         drink.strMeasure10,
         drink.strMeasure11
       ]
-      console.log("fourth")
-      for (let i = 0; i < ingredients.length; i++) { // created a for loop, to loop through the ingredients and measurements
-        if (ingredients[i] !== null && ingredients[i] !== "::marker") {  // added if - so when loop hits a null result, it stops
-          console.log(ingredients[i])
-          console.log(measurement[i])
+      for (let i = 0; i < ingredients.length; i++) {
+        if (ingredients[i] !== null && ingredients[i] !== "::marker") {
           let newLi = document.createElement("div")
           newLi.innerText = `${measurement[i]} ${ingredients[i]}`
-
           cocktailIngredMeas.append(newLi)
         }
       }
-      cocktailNameContain.innerText = selectedDrinkName;
+      cocktailNameContain.innerText = selectedDrinkName
       cocktailImg.innerHTML = `<img src="${image}">`
       cocktailSteps.innerText = instructions
-      cocktailGlass.innerText = glass;
-      console.log("six")
+      cocktailGlass.innerText = (`Serve in a ${glass}`)
     })
 }
 
-//API check Chuck Norris - GOOD
+//API check Chuck Norris Quote
 const getQuote = async () => {
-  console.log("first")
   try {
     const response = await axios.get(API_URL_CHUCK)
-    console.log(response.data.value)
     let showQuote = response.data.value
     let quoteElement = document.querySelector("#show-quote")
-    quoteElement.innerHTML = showQuote
+    quoteElement.innerHTML = (`Chuck's quote of the day: ${showQuote}`)
   } catch (error) {
-    console.log(error)
   }
 }
-console.log(getQuote)
-
 
 //API for QUOTE by Chuck 
 document.querySelector("#chuckQuoteBtn").addEventListener("click", getQuote)
