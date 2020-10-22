@@ -28,6 +28,11 @@ Use this website for cocktail recipes you can make at home.
 ## Wireframe
 ![wireframe](./img/wireframe.png)
 
+## code snippet
+Code Snippet of API
+![code snippet](./img/cocktailDB.png)
+
+
 ## Trello link
 https://trello.com/b/6Tiltpri/mixology-at-home
 
