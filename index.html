@@ -7,47 +7,52 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title> Mixology at home with Chuck Norris 🍸🏡 </title>
-</head>
 
 <body>
-    <header>
-        <h1>
-            Welcome to Mixology at Home with Chuck Norris!
-        </h1>
-        <h3>
-            Let me help you out with making a cocktail today!
-        </h3>
-        <section id="cocktailAndRandom">
-            <div>
-                Do you know the cocktail by name? If yes great! Share it with us, and Chuck will tell you how to
-                make it
-                <form>
-                    <input type="text" id="searchCocktail" placeholder="  enter a cocktail name" />
-                    <button id="cocktailBtn">search cocktail</button>
-                </form>
-                <div id="showCocktail"> placeholder for recipe </div>
-                <!-- <div> Not sure what you want make? Give us an ingredient and Chuck will give you some ideas </div>
-                    <form>
-                        <input type="text" id="searchIngredient" placeholder="enter an ingredient" />
-                        <button id="ingredientBtn">search ingredient</button>
-                    </form>
-                    <p id="showIngredient"> placeholder for ingredient </p> -->
-                <div class="chuckPicks">
-                    Don't know what to drink? Let Chuck Norris give you a suggestion!
-                    <button id="randomDrinkBtn"> Chuck tell me what to drink!</button>
-                    <div id="showRandomDrink"> Todays suggestion: </div>
-                </div>
-                <p class="chuckQuote">
-                    Had a rough day? Let Chuck Norris help you with a pun!
-                    <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
-                <div id="showQuote"> Quote: </div>
-                </p>
-            </div>
-        </section>
+    </head>
+    <h1>
+        Welcome to Mixology at Home with Chuck Norris!
+    </h1>
+    <h3>
+        Let me help you out with making a cocktail today!
+    </h3>
+    <div>
+        Do you know the cocktail by name? If yes great! Share it with us, and Chuck will tell you how to
+        make it
+        <form>
+            <input type="text" id="searchCocktail" placeholder="  enter a cocktail name" />
+            <button id="cocktailBtn">search cocktail</button>
+        </form>
+        <div class="searchCocktailName"></div>
+        <div class="cocktailNameContain"></div>
+        <div class="cocktailImg"></div>
+        <div class="cocktailIngredMeas"></div>
+        <div class="cocktailSteps"></div>
+        <div class="cocktailGlass"></div>
+        <div> Don't forget to taste your drink first before serving! </div>
+    </div>
 
-    </header>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>.
-    <script src="./java.js"></script>
+    <div class="searchRandom">
+        Don't know what to drink? Let Chuck Norris give you a suggestion!
+        <button id="randomDrinkBtn"> Chuck tell me what to drink!</button>
+        <div class="showRandomDrink"> Todays suggestion:
+            <div class="cocktailNameContain"></div>
+            <div class="cocktailImg"></div>
+            <div class="cocktailIngredMeas"></div>
+            <div class="cocktailSteps"></div>
+            <div class="cocktailGlass"></div>
+            <div> Don't forget to taste your drink first before serving! </div>
+        </div>
+    </div>
+
+    <div class="chuckQuote">
+        Had a rough day? Let Chuck Norris help you with a pun!
+        <button id="chuckQuoteBtn"> Give me your pun Chuck!</button>
+        <div id="showQuote"> Quote: </div>
+
+        </header>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>.
+        <script src="./script.js"></script>
 </body>
 
 </html>
