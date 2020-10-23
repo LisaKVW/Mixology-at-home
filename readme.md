@@ -5,7 +5,8 @@ Date: October 22, 2020
 By: Lisa Venneker Wand
 
 [GitHub](https://github.com/LisaKVW) |
-[LinkedIn](https://www.linkedin.com/in/lisa-venneker-wand-8413ab25/)
+[LinkedIn](https://www.linkedin.com/in/lisa-venneker-wand-8413ab25/) |
+[Mixology-at-home](https://mixology-at-home.netlify.app/)
 
 ## Description
 Site to find cocktail recipes by name or at random selection. 
