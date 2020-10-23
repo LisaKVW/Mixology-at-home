@@ -32,7 +32,7 @@ Use this website for cocktail recipes you can make at home.
 ![screenshot1](./img/main.png)
 ![screenshot2](./img/index.png)
 
-## code snippet
+## Code snippet
 Code Snippet of API
 ![code snippet](./img/cocktailDB.png)
 
