@@ -3,18 +3,26 @@
   margin: 0;
 }
 
+.container{
+  position: relative;
+  border-radius: 30%;
+  background-blend-mode: multiply, multiply;
+  margin: 80px;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    border: solid;
-    border-color:green;
-    border-width: 2px;
     margin: 0;
+    background-image: url("https://images.pexels.com/photos/301692/pexels-photo-301692.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    color: white;
 }
 
 header {
- background-color: red;
  text-align: center;
+ color:white;
+ margin-bottom: 30px;
+ font-weight: 900px;
 }
 
 main {
@@ -23,8 +31,11 @@ main {
     grid-template-rows: 1fr;
     width: 100vmax;
     margin: 0 auto;
-    background-color: blue;
+    background-color:hsla(0, 100%, 90%, 0.4);
+    border-radius: 40px;
+    padding-bottom: 23px;
 }
+
 
 #know-cocktail {
     grid-column-start: 1;
@@ -32,6 +43,7 @@ main {
     grid-row-start: 1;
     grid-row-end: 1;
     padding: 20px;
+    font-size: 19px;
 }
 
 #random-cocktail{
@@ -46,6 +58,9 @@ main {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1; 
+    color: black;
+    font-size: 19px;
+    font-weight: 900px;
 }
 
 #chuck-quote {
@@ -66,7 +81,6 @@ section {
     grid-row-start: 1;
     grid-row-end: 1;  
     text-align: center;
-    background-color: yellow;  
 }
 
 form{
@@ -75,7 +89,6 @@ form{
     padding: 5px;
     font-size: 25px;
 }
-
 
 button {
     display: inline-block;
@@ -86,9 +99,17 @@ button {
     margin-top: 15px;
     border-radius: 10px;
     padding: 5px;
+    font-weight: 800px;
 }
 
 img {
     height: 185px;
     width: 185px;
+}
+footer {
+    text-align: center;
+}
+a{
+    color: #fdfcfb;
+    font-weight: 900px;
 }

@@ -6,36 +6,36 @@ body{
     display: block;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    background-image: url("https://cdn.vox-cdn.com/thumbor/5U9YKYmXL2_85VcSQii0WOo8BMU=/0x0:5000x3750/1320x743/filters:focal(2100x1475:2900x2275):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65947322/Main_Bar_3.0.jpg");
-    color: grey;
+    background-image: url("https://images.pexels.com/photos/2835547/pexels-photo-2835547.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    color: white;
+}
+
+header{
+    background-color:hsla(0, 100%, 90%, 0.5);
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 53px;
 }
 
 .chuckImg {
     height: 320px;
     width: 420px;
-    margin: 26px;
+    margin: 30px;
+    padding: 50px;
 }
 
-.enterSite{
-    font-size: large;
-    padding: 5px;
-    margin: auto;
-    margin-top: 15px;
-    margin-bottom: -5px;
-    text-align: center;
-    display: block;
-    font-family: 'Raleway', sans-serif;
-    position: relative;
-}
 
 button {
     font-family: 'Raleway', sans-serif;
-    border: 2px solid 0.8px;
-    font-weight: bolder;
-    margin-top: 15px;
-}
-
-button :hover{
     cursor: pointer;
-    color:red;
+    color: black;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 30%;
+    margin-bottom: 8px;
 }
