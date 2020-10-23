@@ -21,14 +21,14 @@ Use this website for cocktail recipes you can make at home.
 ## User Stories
 1. As a user, I open the website by entering the site, via the entry button.
 2. As a user, upon entering the site, I should find two search options.
-3. As a user, option one will be to enter and submit a cocktail by name. This search request, will give the user the cocktail recipe.
-4. As a user, you also have option two, here the user will receive a random cocktail recipe.
-5. As a user, there will be an optional 'fun pun by Chuck Norris' button to start your evening.
+3. As a user, I can search for cocktails by name. This search request, will give the user the cocktail recipe.
+4. As a user, you also have anoter option to receive receive a cocktail recipe at random.
+5. As a user, there will be an optional 'fun pun by Chuck Norris' button to start your evening
 
 ## Wireframe
 ![wireframe](./img/wireframe.png)
 
-## Sreenshots
+## Screenshots
 ![screenshot1](./img/main.png)
 ![screenshot2](./img/index.png)
 
