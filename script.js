@@ -1,5 +1,5 @@
 //API key for cocktails
-const API_KEY = "1"
+const API_KEY = process.env.API_KEY
 //API to find cocktails by name
 const API_URL = `https://www.thecocktaildb.com/api/json/v1/${API_KEY}/search.php?s=margarita`
 
